@@ -9,21 +9,17 @@ from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
 
-try:
-    import argparse
-    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-except ImportError:
-    flags = None
 
 SCOPES = 'https://www.googleapis.com/auth/spreadsheets'
-CLIENT_SECRET_FILE = 'client_secret.json'
+CLIENT_SECRET_FILE = 'client_secretSheets.json'
 APPLICATION_NAME = 'PY'
+KEY ='AIzaSyAG46d7Drgmz88Ek7DU8cWsgnwZvRxPWAk'
 hits = []
 invalid = []
 fileNameValues = []
 filenameParams = {}
 
-def get_credentials():
+def logScraper(a):
     home_dir = os.path.expanduser('~')
     credential_dir = os.path.join(home_dir, '.credentials')
     if not os.path.exists(credential_dir):
@@ -39,22 +35,16 @@ def get_credentials():
         if flags:
             credentials = tools.run_flow(flow, store, flags)
         else: # Needed only for compatibility with Python 2.6
-            credentials = tools.run(flow, store)
+            credentials = tools.run(flow, store,)
         print('Storing credentials to ' + credential_path)
-    return credentials
 
-def main():
-
-    credentials = get_credentials()
     http = credentials.authorize(httplib2.Http())
     discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
                     'version=v4')
     service = discovery.build('sheets', 'v4', http=http,
                               discoveryServiceUrl=discoveryUrl)
-
-
     
-    spreadsheetId = '1PKDNrIGp65F3mm5fhFvuI8sY7IhAoOzf5m6unZ2KUmo'										#Input all the Ids in the folder, and sift through until you find....initials?
+    spreadsheetId = [a]									#Input all the Ids in the folder, and sift through until you find....initials?
     dataFilename = ['BCI 1!C9','BCI 1!C12','BCI 1!C15','BCI 1!C19','BCI 1!C22','BCI 1!C25']
     hitRange = 'BCI 1!F9:F27'
     invalidRange = 'BCI 1!G9:G27'
@@ -65,17 +55,20 @@ def main():
 
     #Read data from spreadsheet
     filename = service.spreadsheets().values().batchGet(
-        spreadsheetId=spreadsheetId, ranges=dataFilename).execute()
+        spreadsheetId=spreadsheetId[0], ranges=dataFilename).execute()
     filenameParams = filename.get('valueRanges')
     for vals in range(0,5):
         fileNameValues.append(filenameParams[vals].get('values'))
-    subjectInits = fileNameValues[1][0][0][0:4]															#Fix for initials that are only 2 letters 
-    dateOfExp = fileNameValues[1][0][0][7:16]															# if str[2]=='_' then change everything
-	
+    subjectInits = fileNameValues[1][0][0][0:4] 
+    dateOfExp = fileNameValues[1][0][0][7:16]
+    if subjectInits[2] == "_":
+        subjectInits = fileNameValues[1][0][0][0:3]
+        dateOfExp = fileNameValues[1][0][0][6:15]
+
     #Read data from applog
     for taskNumber in range(0,6):
-        fileToRead = subjectInits+tasks[taskNumber]+dateOfExp+endOfLine
-        with open(fileToRead,'r') as f:																#Fix so applogs can be in different folders
+        fileToRead = ".."+"/"+subjectInits+tasks[taskNumber]+dateOfExp+endOfLine[1:4]+"/"+subjectInits+tasks[taskNumber]+dateOfExp+endOfLine   #modify directory based on what computer this is on
+        with open(fileToRead,'r') as f:																
             for line in f:
                 for word in line.split():
                     if word == "finished:":
@@ -107,10 +100,11 @@ def main():
 
     #Write data to spreadsheet
     result = service.spreadsheets().values().batchUpdate(
-	        spreadsheetId=spreadsheetId, body=body).execute()
+	        spreadsheetId=spreadsheetId[0], body=body).execute()
 
 if __name__ == '__main__':
-    main()
+    a = str(sys.argv[1])
+    logScraper(a)
 
 
 
