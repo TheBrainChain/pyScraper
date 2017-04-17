@@ -1,0 +1,99 @@
+Subject ID: SX
+Session Date: 20161110
+Scan Number: 1
+Scan Type: imagine
+--------------
+64-bit Windows
+InpOutx64 driver is open
+Start first block...
+--------------
+Block 1, Imagine Left (taskidx = 6)
+  Trial: 1
+  task start-stop times: 10.0515-12.0569
+  intertrial interval start-stop times: 12.0647-18.5612
+  Trial: 2
+  task start-stop times: 18.5646-20.5732
+  intertrial interval start-stop times: 20.5761-27.5835
+  Trial: 3
+  task start-stop times: 27.5856-29.5905
+  intertrial interval start-stop times: 29.5926-36.3509
+  Trial: 4
+  task start-stop times: 36.3537-38.3569
+  intertrial interval start-stop times: 38.359-44.3651
+  Trial: 5
+  task start-stop times: 44.3671-46.3753
+  intertrial interval start-stop times: 46.3773-52.6356
+  Trial: 6
+  task start-stop times: 52.6383-54.6436
+  END OF BLOCK 1
+  task block start-stop times: 10.0465-54.6445
+  rest block start-stop times: 54.6464-64.6544
+--------------
+Block 2, Imagine Left (taskidx = 6)
+  Trial: 1
+  task start-stop times: 64.6591-66.6732
+  intertrial interval start-stop times: 66.6752-73.1765
+  Trial: 2
+  task start-stop times: 73.1792-75.1886
+  intertrial interval start-stop times: 75.1906-81.4528
+  Trial: 3
+  task start-stop times: 81.4556-83.4579
+  intertrial interval start-stop times: 83.46-90.2173
+  Trial: 4
+  task start-stop times: 90.2201-92.2243
+  intertrial interval start-stop times: 92.2264-98.2346
+  Trial: 5
+  task start-stop times: 98.2365-100.2446
+  intertrial interval start-stop times: 100.2467-107.2519
+  Trial: 6
+  task start-stop times: 107.2538-109.259
+  END OF BLOCK 2
+  task block start-stop times: 64.6562-109.2598
+  rest block start-stop times: 109.2613-119.2597
+--------------
+Block 3, Imagine Right (taskidx = 8)
+  Trial: 1
+  task start-stop times: 119.2643-121.2706
+  intertrial interval start-stop times: 121.2726-127.7809
+  Trial: 2
+  task start-stop times: 127.7835-129.7889
+  intertrial interval start-stop times: 129.791-136.7972
+  Trial: 3
+  task start-stop times: 136.7999-138.8044
+  intertrial interval start-stop times: 138.8064-145.0616
+  Trial: 4
+  task start-stop times: 145.0636-147.0727
+  intertrial interval start-stop times: 147.0747-153.0789
+  Trial: 5
+  task start-stop times: 153.0817-155.0921
+  intertrial interval start-stop times: 155.0942-161.8523
+  Trial: 6
+  task start-stop times: 161.8551-163.8584
+  END OF BLOCK 3
+  task block start-stop times: 119.261-163.8592
+  rest block start-stop times: 163.8607-173.8621
+--------------
+Block 4, Imagine Right (taskidx = 8)
+  Trial: 1
+  task start-stop times: 173.8663-175.8699
+  intertrial interval start-stop times: 175.872-182.8834
+  Trial: 2
+  task start-stop times: 182.886-184.8884
+  intertrial interval start-stop times: 184.8904-191.3966
+  Trial: 3
+  task start-stop times: 191.3994-193.4067
+  intertrial interval start-stop times: 193.4087-200.165
+  Trial: 4
+  task start-stop times: 200.1677-202.1711
+  intertrial interval start-stop times: 202.1731-208.4314
+  Trial: 5
+  task start-stop times: 208.4341-210.4394
+  intertrial interval start-stop times: 210.4411-216.4487
+  Trial: 6
+  task start-stop times: 216.4514-218.4578
+  END OF BLOCK 4
+  task block start-stop times: 173.8634-218.4586
+  rest block start-stop times: 218.4601-228.4745
+--------------
+END OF SCAN
+Total time elapsed: 228.4778

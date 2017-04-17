@@ -1,0 +1,9 @@
+Subject ID: SX
+Session Date: 20170131
+Scan Number: 2
+Scan Type: rest
+--------------
+64-bit Windows
+InpOutx64 driver is open
+END OF SCAN
+Total time elapsed: 380.0149

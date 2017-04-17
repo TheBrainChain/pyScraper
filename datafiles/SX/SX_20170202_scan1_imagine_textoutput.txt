@@ -1,0 +1,34 @@
+Subject ID: SX
+Session Date: 20170202
+Scan Number: 1
+Scan Type: imagine
+--------------
+64-bit Windows
+InpOutx64 driver is open
+Start first block...
+--------------
+Block 1, Imagine Left (taskidx = 6)
+  Trial: 1
+  task start-stop times: 10.0593-12.0648
+  intertrial interval start-stop times: 12.0727-18.5791
+  Trial: 2
+  task start-stop times: 18.583-20.5841
+  intertrial interval start-stop times: 20.5871-27.5914
+  Trial: 3
+  task start-stop times: 27.5944-29.6005
+  intertrial interval start-stop times: 29.6025-36.3598
+  Trial: 4
+  task start-stop times: 36.3625-38.3668
+  intertrial interval start-stop times: 38.3689-44.374
+  Trial: 5
+  task start-stop times: 44.376-46.3842
+  intertrial interval start-stop times: 46.3863-52.6444
+  Trial: 6
+{Error using <a href="matlab:helpUtils.errorDocCallback('handle.handle/set')" style="font-weight:bold">handle.handle/set</a>
+Invalid or deleted object.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('run_baseline_exps', 'D:\MBSR_BCI\scripts\run_baseline_exps.m', 156)" style="font-weight:bold">run_baseline_exps</a> (<a href="matlab: opentoline('D:\MBSR_BCI\scripts\run_baseline_exps.m',156,0)">line 156</a>)
+            set(h,'String',blocktasktype,'color','k');
+} 
+run_baseline_exps('SX','20170202',2,'LR')
+error: tasktype must be a string (task, breath, cpt,imagine, break, or rest)

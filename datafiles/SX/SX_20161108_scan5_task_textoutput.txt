@@ -1,0 +1,187 @@
+Subject ID: SX
+Session Date: 20161108
+Scan Number: 5
+Scan Type: task
+--------------
+64-bit Windows
+InpOutx64 driver is open
+Start first block...
+--------------
+Block 1, Move Right (taskidx = 4)
+  Trial: 1
+  task start-stop times: 10.0454-12.0517
+  intertrial interval start-stop times: 12.0598-18.5579
+  Trial: 2
+  task start-stop times: 18.5603-20.569
+  intertrial interval start-stop times: 20.571-27.5793
+  Trial: 3
+  task start-stop times: 27.5813-29.5884
+  intertrial interval start-stop times: 29.59-35.8456
+  Trial: 4
+  task start-stop times: 35.8484-37.8537
+  intertrial interval start-stop times: 37.8558-44.6151
+  Trial: 5
+  task start-stop times: 44.617-46.6211
+  intertrial interval start-stop times: 46.6227-52.6264
+  Trial: 6
+  task start-stop times: 52.6291-54.6405
+  END OF BLOCK 1
+  task block start-stop times: 10.0404-54.6412
+  rest block start-stop times: 54.6432-64.6551
+--------------
+Block 2, Imagine Right (taskidx = 8)
+  Trial: 1
+  task start-stop times: 64.6588-66.667
+  intertrial interval start-stop times: 66.6686-73.6763
+  Trial: 2
+  task start-stop times: 73.6791-75.6854
+  intertrial interval start-stop times: 75.6871-82.4387
+  Trial: 3
+  task start-stop times: 82.4407-84.4527
+  intertrial interval start-stop times: 84.4543-90.957
+  Trial: 4
+  task start-stop times: 90.959-92.9701
+  intertrial interval start-stop times: 92.9718-99.2324
+  Trial: 5
+  task start-stop times: 99.2344-101.2375
+  intertrial interval start-stop times: 101.2392-107.2428
+  Trial: 6
+  task start-stop times: 107.2448-109.2549
+  END OF BLOCK 2
+  task block start-stop times: 64.6561-109.2553
+  rest block start-stop times: 109.2567-119.2703
+--------------
+Block 3, Move Right (taskidx = 4)
+  Trial: 1
+  task start-stop times: 119.2736-121.2833
+  intertrial interval start-stop times: 121.2849-127.2955
+  Trial: 2
+  task start-stop times: 127.2976-129.2996
+  intertrial interval start-stop times: 129.3012-136.061
+  Trial: 3
+  task start-stop times: 136.0629-138.0691
+  intertrial interval start-stop times: 138.0706-144.5773
+  Trial: 4
+  task start-stop times: 144.5793-146.5864
+  intertrial interval start-stop times: 146.588-153.5967
+  Trial: 5
+  task start-stop times: 153.5988-155.6027
+  intertrial interval start-stop times: 155.6043-161.8621
+  Trial: 6
+  task start-stop times: 161.864-163.8712
+  END OF BLOCK 3
+  task block start-stop times: 119.2711-163.8716
+  rest block start-stop times: 163.8729-173.8858
+--------------
+Block 4, Imagine Right (taskidx = 8)
+  Trial: 1
+  task start-stop times: 173.8902-175.8987
+  intertrial interval start-stop times: 175.9003-182.658
+  Trial: 2
+  task start-stop times: 182.6608-184.6651
+  intertrial interval start-stop times: 184.6672-191.1794
+  Trial: 3
+  task start-stop times: 191.1815-193.1835
+  intertrial interval start-stop times: 193.1856-199.4437
+  Trial: 4
+  task start-stop times: 199.4457-201.4518
+  intertrial interval start-stop times: 201.4534-208.4542
+  Trial: 5
+  task start-stop times: 208.4569-210.4692
+  intertrial interval start-stop times: 210.4708-216.4765
+  Trial: 6
+  task start-stop times: 216.4793-218.4855
+  END OF BLOCK 4
+  task block start-stop times: 173.8872-218.4859
+  rest block start-stop times: 218.4873-228.5012
+--------------
+Block 5, Move Left (taskidx = 2)
+  Trial: 1
+  task start-stop times: 228.5062-230.5121
+  intertrial interval start-stop times: 230.5137-236.7724
+  Trial: 2
+  task start-stop times: 236.7752-238.7815
+  intertrial interval start-stop times: 238.7831-244.7888
+  Trial: 3
+  task start-stop times: 244.7915-246.7998
+  intertrial interval start-stop times: 246.8019-253.3101
+  Trial: 4
+  task start-stop times: 253.3129-255.3162
+  intertrial interval start-stop times: 255.3178-262.0705
+  Trial: 5
+  task start-stop times: 262.0725-264.0846
+  intertrial interval start-stop times: 264.0867-271.0919
+  Trial: 6
+  task start-stop times: 271.0946-273.102
+  END OF BLOCK 5
+  task block start-stop times: 228.5026-273.1024
+  rest block start-stop times: 273.1038-283.1106
+--------------
+Block 6, Move Left (taskidx = 2)
+  Trial: 1
+  task start-stop times: 283.115-285.1125
+  intertrial interval start-stop times: 285.1146-291.3728
+  Trial: 2
+  task start-stop times: 291.3757-293.3799
+  intertrial interval start-stop times: 293.382-299.3892
+  Trial: 3
+  task start-stop times: 299.3911-301.3992
+  intertrial interval start-stop times: 301.4013-307.9105
+  Trial: 4
+  task start-stop times: 307.9125-309.9176
+  intertrial interval start-stop times: 309.9197-316.9209
+  Trial: 5
+  task start-stop times: 316.9236-318.934
+  intertrial interval start-stop times: 318.9361-325.6933
+  Trial: 6
+  task start-stop times: 325.696-327.7003
+  END OF BLOCK 6
+  task block start-stop times: 283.112-327.7011
+  rest block start-stop times: 327.7027-337.711
+--------------
+Block 7, Imagine Left (taskidx = 6)
+  Trial: 1
+  task start-stop times: 337.715-339.7278
+  intertrial interval start-stop times: 339.7295-345.7381
+  Trial: 2
+  task start-stop times: 345.7408-347.7453
+  intertrial interval start-stop times: 347.7474-354.0054
+  Trial: 3
+  task start-stop times: 354.0074-356.0156
+  intertrial interval start-stop times: 356.0173-363.0249
+  Trial: 4
+  task start-stop times: 363.0276-365.03
+  intertrial interval start-stop times: 365.0321-371.5363
+  Trial: 5
+  task start-stop times: 371.539-373.5474
+  intertrial interval start-stop times: 373.5495-380.3067
+  Trial: 6
+  task start-stop times: 380.3087-382.3147
+  END OF BLOCK 7
+  task block start-stop times: 337.7121-382.3152
+  rest block start-stop times: 382.3165-392.3314
+--------------
+Block 8, Imagine Left (taskidx = 6)
+  Trial: 1
+  task start-stop times: 392.3358-394.3423
+  intertrial interval start-stop times: 394.3444-400.3486
+  Trial: 2
+  task start-stop times: 400.351-402.3636
+  intertrial interval start-stop times: 402.3652-409.3679
+  Trial: 3
+  task start-stop times: 409.3707-411.378
+  intertrial interval start-stop times: 411.3801-417.8893
+  Trial: 4
+  task start-stop times: 417.892-419.8964
+  intertrial interval start-stop times: 419.8985-426.6517
+  Trial: 5
+  task start-stop times: 426.6537-428.6628
+  intertrial interval start-stop times: 428.6644-434.9221
+  Trial: 6
+  task start-stop times: 434.9249-436.9321
+  END OF BLOCK 8
+  task block start-stop times: 392.3327-436.9329
+  rest block start-stop times: 436.9345-446.9458
+--------------
+END OF SCAN
+Total time elapsed: 446.9552
