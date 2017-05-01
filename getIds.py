@@ -11,6 +11,7 @@ import argparse
 flags = argparse.ArgumentParser()
 flags.add_argument("Subject")
 flags.add_argument("Task")
+flags.add_argument("ParamName")
 Params = flags.parse_args()
 
 # If modifying these scopes, delete your previously saved credentials
@@ -62,17 +63,19 @@ def main():
         dataFilename.extend([subsheet[sheets]+'!C9',subsheet[sheets]+'!C12',subsheet[sheets]+'!C15',subsheet[sheets]+'!C19',subsheet[sheets]+'!C22',subsheet[sheets]+'!C25'])  #For BCI 1 label
         hitRange.append(subsheet[sheets]+'!F9:F27')
         invalidRange.append(subsheet[sheets]+'!G9:G27')
+
     tasks = ["LR1","UD1","2D1","LR2","UD2","2D2"]
     endOfLine = "S001.applog"
 
     filename = SpreadsheetService.spreadsheets().values().batchGet(spreadsheetId=spreadsheetId[0], ranges=dataFilename).execute()
     filenameParams = filename.get('valueRanges')
-    print(filename)
     for vals in range(0,60):
         fileNameValues.extend(filenameParams[vals].get('values'))
     subjectInits = fileNameValues[0][0][0:2]
     if fileNameValues[0][0][2] != "_":
         subjectInits = fileNameValues[0][0][0:3]
+
+    print(fileNameValues[0][0])
 
     for i in range(0,10):
         if fileNameValues[0][0][2] != "_":
@@ -116,12 +119,23 @@ def main():
     invalidValues.insert(142,[])
     invalidValues.insert(161,[])
     invalidValues.insert(180,[])
-
-    if Params.Task == tasks[0]:
+    print(hitRange[0])
+    if Params.ParamName == fileNameValues[0][0]:
         data = [
-        {'range': hitRange[0],'values': hitValues[0:3]},
-        {'range': invalidRange[0],'values': invalidValues[0:3]}
+        {'range': 'BCI 1!F9:F11','values': hitValues[0:3]},
+        {'range': 'BCI 1!G9:G11','values': invalidValues[0:3]}
         ]
+    elif Params.ParamName == fileNameValues[1][0]:
+        data = [
+        {'range': 'BCI 1!F12:F14','values': hitValues[3:6]},
+        {'range': 'BCI 1!G12:G14','values': invalidValues[3:6]}
+        ]
+    elif Params.ParamName == fileNameValues[2][0]:
+        data = [
+        {'range': 'BCI 1!F15:F17','values': hitValues[6:9]},
+        {'range': 'BCI 1!G15:G17','values': invalidValues[6:9]}
+        ]
+
     data1 = [
     	{'range': hitRange[0],'values': hitValues[0:19]},
     	{'range': invalidRange[0],'values': invalidValues[0:19]},
