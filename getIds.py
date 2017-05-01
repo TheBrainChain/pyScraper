@@ -9,8 +9,9 @@ from oauth2client.file import Storage
 
 import argparse
 flags = argparse.ArgumentParser()
-flags.add_argument("a")
-test = flags.parse_args()
+flags.add_argument("Subject")
+flags.add_argument("Task")
+Params = flags.parse_args()
 
 # If modifying these scopes, delete your previously saved credentials
 # at ~/.credentials/drive-python-quickstart.json
@@ -46,16 +47,14 @@ def main():
     http = credentials.authorize(httplib2.Http())
     DriveService = discovery.build('drive', 'v3', http=http)
 
-    DriveResults = DriveService.files().list(q="name = '" + test.a + "_RunLog'", pageSize=50, fields="nextPageToken, files(id, name)").execute()
+    DriveResults = DriveService.files().list(q="name = '" + Params.Subject + "_RunLog'", pageSize=50, fields="nextPageToken, files(id, name)").execute()
 
     items = DriveResults.get('files', [])
     if not items:
         print('No files found.')
     else:
         for item in items:
-#            print("Item:")
             print("Name: " + item['name'])
-    #        print("ID: " + item['id'])
     spreadsheetId = [item['id']]
     subsheet = ['Summary','Pre-MBSR EEG', 'Pre-BMSR BCI', 'BCI 1','BCI 2','BCI 3','BCI 4','BCI 5','BCI 6','BCI 7','BCI 8','BCI 9','BCI 10','Post-BCI EEG']
 
@@ -63,12 +62,12 @@ def main():
         dataFilename.extend([subsheet[sheets]+'!C9',subsheet[sheets]+'!C12',subsheet[sheets]+'!C15',subsheet[sheets]+'!C19',subsheet[sheets]+'!C22',subsheet[sheets]+'!C25'])  #For BCI 1 label
         hitRange.append(subsheet[sheets]+'!F9:F27')
         invalidRange.append(subsheet[sheets]+'!G9:G27')
-
     tasks = ["LR1","UD1","2D1","LR2","UD2","2D2"]
     endOfLine = "S001.applog"
 
     filename = SpreadsheetService.spreadsheets().values().batchGet(spreadsheetId=spreadsheetId[0], ranges=dataFilename).execute()
     filenameParams = filename.get('valueRanges')
+    print(filename)
     for vals in range(0,60):
         fileNameValues.extend(filenameParams[vals].get('values'))
     subjectInits = fileNameValues[0][0][0:2]
@@ -117,7 +116,13 @@ def main():
     invalidValues.insert(142,[])
     invalidValues.insert(161,[])
     invalidValues.insert(180,[])
-    data = [
+
+    if Params.Task == tasks[0]:
+        data = [
+        {'range': hitRange[0],'values': hitValues[0:3]},
+        {'range': invalidRange[0],'values': invalidValues[0:3]}
+        ]
+    data1 = [
     	{'range': hitRange[0],'values': hitValues[0:19]},
     	{'range': invalidRange[0],'values': invalidValues[0:19]},
     	{'range': hitRange[1],'values': hitValues[19:38]},

@@ -1,0 +1,4 @@
+CALL C:\Users\BME_HeLab\Documents\GitHub\Scraper\Scripts\activate.bat
+pause
+python C:\Users\BME_HeLab\Documents\GitHub\Scraper\getIds.py SMK
+pause
