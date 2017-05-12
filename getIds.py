@@ -119,7 +119,13 @@ def main():
     invalidValues.insert(142,[])
     invalidValues.insert(161,[])
     invalidValues.insert(180,[])
-    print(hitRange[0])
+
+#    for i in range(0,6):
+#       if Params.ParamName == fileNameValues[i][0]:
+#           data = [
+#           {'range': ,'values': hitValues[0:3]},
+#           {'range': ,'values': invalidValues[0:3]}
+#           ]
     if Params.ParamName == fileNameValues[0][0]:
         data = [
         {'range': 'BCI 1!F9:F11','values': hitValues[0:3]},
@@ -162,7 +168,6 @@ def main():
     	    'valueInputOption': "USER_ENTERED",
     	    'data': data
     	}
-
     #Write data to spreadsheet
     SheetResults = SpreadsheetService.spreadsheets().values().batchUpdate(
 	        spreadsheetId=spreadsheetId[0], body=body).execute()
